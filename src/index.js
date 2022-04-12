@@ -8,11 +8,9 @@ import {BrowserRouter as Router} from "react-router-dom";
 import App from './App'
 
 /*import router as the topmost so as not to worry about the main router */
-ReactDOM.render(
-    <Router>
+ReactDOM.render(<Router>
         <App/>
     </Router>,
-
     document.getElementById('root')
 )
 
