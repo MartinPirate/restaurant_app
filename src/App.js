@@ -1,8 +1,13 @@
 import React from "react";
+import {Header} from "./components";
 
 const App = () => {
-    return <div className="w-screen h-screen flex items-center justify-center text-blue-600">App</div>
+    return <div className="w-screen h-auto flex flex-col  bg-primary">
+        <Header/>
+
+    </div>
 };
 export default App;
+
 
 

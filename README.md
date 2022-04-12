@@ -1,2 +1,2 @@
-# Restaurant app using react js, Tailwind and Css
+# Restaurant app using react js reducers, Tailwind and Css
 
