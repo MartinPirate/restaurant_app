@@ -3,7 +3,8 @@ import {MdShoppingBasket} from "react-icons/md";
 
 import Logo from '../img/logo.png'
 import Avatar from '../img/avatar.png'
-
+import {motion} from "framer-motion";
+import {Link} from "react-router-dom";
 
 
 class Header extends Component {
@@ -13,10 +14,10 @@ class Header extends Component {
 
                 {/*Destop and tablet mode*/}
                 <div className='hidden md:flex w-full items-center justify-between'>
-                    <div className='flex items-center gap-2'>
+                    <Link to={"/"} className='flex items-center gap-2'>
                         <img src={Logo} className='w-8 object-cover' alt='logo'/>
                         <p className='text-headingColor text-xl font-bold'>city</p>
-                    </div>
+                    </Link>
                     <div className='flex items-center gap-8'>
                         <ul className='flex items-center gap-8'>
                             <li className='text-base  text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>Home</li>
@@ -34,7 +35,12 @@ class Header extends Component {
 
                         </div>
                         {/*user avatar*/}
-                        <img src={Avatar} className='w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-2xl' alt="userprofile"/>
+
+                        <motion.img
+                            whileTap={{scale : 0.6}}
+                            src={Avatar}
+                            className='w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-2xl cursor-pointer'
+                            alt="userprofile"/>
                     </div>
                 </div>
 
